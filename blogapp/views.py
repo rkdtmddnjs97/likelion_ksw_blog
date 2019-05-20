@@ -43,3 +43,4 @@ def search(request):
     q=request.GET['q']
     ans = Blog.objects.filter(title=q)
     return render(request, 'search.html', {'q':q, 'ans':ans})
+    

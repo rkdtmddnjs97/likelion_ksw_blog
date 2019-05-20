@@ -1,5 +1,8 @@
 
 <body>
+        {% extends 'base.html'%}
+
+        {% block contents%}
     <h1>Make Your Blog! </h1>
     <a href="{% url 'new'%}">새로운 글 작성하기</a>
     <h2>블로그 글 목록</h2>
@@ -20,7 +23,10 @@
     <br>
     <hr>
     {% endfor %}
+
+    {% endblock %}
     </body>
+ 
     <style>
     
     body{

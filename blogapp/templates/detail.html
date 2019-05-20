@@ -1,8 +1,12 @@
+
 <head>  
     <meta http-equiv="refresh" content="5; url = /"/>
  </head>
  
  <body>
+        {% extends 'base.html'%}
+
+        {% block contents%}
          <span id="timeString"></span>
      
  
@@ -24,7 +28,9 @@
  <hr>
  <a href="{% url 'home' %}"> home </a>
  
+ {% endblock %}
  </body>
+ 
  
  
  

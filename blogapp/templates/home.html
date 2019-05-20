@@ -1,0 +1,31 @@
+
+<body>
+    <h1>Make Your Blog! </h1>
+    <a href="{% url 'new'%}">새로운 글 작성하기</a>
+    <h2>블로그 글 목록</h2>
+    
+    <form action="{% url 'search' %}" method="get">
+        <input type="text" name="q" value="{{ q }}">
+        <input type="submit" value="검색">
+    </form>
+    
+    {% for blog in blogs %}
+    <a href="{% url 'detail' blog.id %}">
+        제목 : {{blog.title}} 
+    </a>
+    <br>
+    작성자 : {{blog.writer}}
+    <br>
+    {{post.pub_date}}
+    <br>
+    <hr>
+    {% endfor %}
+    </body>
+    <style>
+    
+    body{
+        background-color:rgb(221, 203, 144);
+    }
+    
+    
+    </style>

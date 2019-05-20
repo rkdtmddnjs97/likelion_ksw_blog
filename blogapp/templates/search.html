@@ -1,0 +1,25 @@
+<body>
+<h1>search</h1>
+
+<hr>
+<div>
+<ol>
+    {% for search in ans %}
+    <a href="{% url 'detail' search.id %}">
+        <li>{{search.title}} | {{search.writer}} | {{search.pub_date}}</li>
+    </a>
+    <br>
+    {% endfor %}
+</ol>
+</div>
+</body>
+
+<style>
+    body {
+        background-color: rgb(221, 203, 144);
+    }
+
+    div {
+        background-color: yellow;
+    }
+</style>

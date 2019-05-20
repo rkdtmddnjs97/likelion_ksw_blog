@@ -1,0 +1,30 @@
+<body>
+    <h1>새 글 입력.</h1>
+
+
+    <div>
+        <form action="{% url 'create'%}" method="POST">
+            {% csrf_token %}
+            title : <input type="text" name="title" placeholder="제목을 입력하세요">
+            <br>
+            writer : <input type="text" name="writer" placeholder="작성자를 입력하세요">
+            <br>
+            body
+            <br>
+            <textarea name="content" id="" cols="30" rows="10" placeholder="본문을 입력하세요"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+
+
+
+<style>
+    body {
+        background-color: rgb(221, 203, 144);
+    }
+
+    div {
+        background-color: yellow;
+    }
+</style>

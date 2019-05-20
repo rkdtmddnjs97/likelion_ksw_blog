@@ -1,0 +1,30 @@
+<body>
+    <h1>수정띠.</h1>
+
+    <div>
+        <form action="{% url 'update' blog.id%}" method="POST">
+            {% csrf_token %}
+            title : <input type="text" name="title" placeholder="제목을 입력하세요" value="{{blog.title}}">
+            <br>
+            writer : <input type="text" name="writer" placeholder="작성자를 입력하세요" value="{{blog.writer}}">
+            <br>
+            body
+            <br>
+            <textarea name="content" id="" cols="30" rows="10" placeholder="본문을 입력하세요">{{blog.body}}</textarea>
+            <input type="submit">
+        </form>
+
+    </div>
+</body>
+
+
+
+<style>
+    body {
+        background-color: rgb(221, 203, 144);
+    }
+
+    div {
+        background-color: yellow;
+    }
+</style>

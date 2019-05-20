@@ -20,7 +20,7 @@ def create(request):
     new_blog.pub_date = timezone.datetime.now()
     new_blog.body = request.POST['content']
     new_blog.save()
-    return redirect('/blog/'+str(new_blog.id))
+    return redirect('home')
 
 def delete(request, delete_blog_id):
     delete_blog = get_object_or_404(Blog,pk = delete_blog_id)
@@ -37,7 +37,7 @@ def update(request, update_blog_id):
     update_blog.writer = request.POST['writer']
     update_blog.body=request.POST['content']
     update_blog.save()
-    return redirect('/blog/'+str(update_blog.id))
+    return redirect('home')
 
 def search(request):
     q=request.GET['q']
